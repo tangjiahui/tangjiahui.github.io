@@ -294,6 +294,22 @@ hr {
 .post-body pre code, .page-body pre code { background: none; padding: 0; }
 .post-body img, .page-body img { margin: 2rem 0; }
 
+.spotify-embed {
+  margin: 2rem 0;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.02);
+}
+.spotify-embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+@media (prefers-color-scheme: dark) {
+  .spotify-embed { background: rgba(255,255,255,0.04); }
+}
+
 .post-nav {
   display: flex;
   justify-content: space-between;
