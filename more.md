@@ -40,8 +40,6 @@ A rolling playlist — the songs in heavy rotation right now.
 {% endfor %}
 </ul>
 
-Covers via [OpenLibrary](https://openlibrary.org). To update this list, edit `_data/reading.yml`.
-
 ## What I recently finished
 
 <ul class="reading-list">
@@ -59,5 +57,3 @@ Covers via [OpenLibrary](https://openlibrary.org). To update this list, edit `_d
   </li>
 {% endfor %}
 </ul>
-
-To update this list, edit `_data/finished.yml`.
