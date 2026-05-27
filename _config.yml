@@ -1,0 +1,45 @@
+title: Jiahui Tang
+tagline: Notes, work, and reading.
+description: >-
+  A personal blog and notebook.
+author: Jiahui Tang
+email:
+url: "https://tangjiahui.github.io"
+baseurl: ""
+
+permalink: /:year/:month/:title/
+timezone: America/Los_Angeles
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/page:num/"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
