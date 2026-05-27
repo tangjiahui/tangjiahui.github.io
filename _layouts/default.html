@@ -9,15 +9,9 @@
     {% seo %}
   </head>
   <body class="{% if page.url == '/' %}home{% else %}interior{% endif %}">
-    <nav class="topbar">
-      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <ul>
-        <li><a href="{{ '/' | relative_url }}#contents">Index</a></li>
-        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-        <li><a href="https://github.com/tangjiahui" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
-      </ul>
-    </nav>
-    {{ content }}
+    {% include menu.html %}
+    <main class="stage">
+      {{ content }}
+    </main>
   </body>
 </html>

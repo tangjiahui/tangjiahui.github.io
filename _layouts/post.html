@@ -1,23 +1,25 @@
 ---
 layout: default
 ---
-<article class="post interior-shell">
-  <header class="post-header">
-    <p class="kicker">
+<article class="entry standalone">
+  <header class="entry-head">
+    <p class="entry-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
       {% if page.tags and page.tags.size > 0 %}
-        <span class="dot">·</span>
-        {% for tag in page.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+        <span class="sep">—</span>
+        <span>{% for tag in page.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
       {% endif %}
     </p>
-    <h1 class="post-title">{{ page.title }}</h1>
-    {% if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+    <h1 class="entry-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="entry-subtitle">{{ page.subtitle }}</p>{% endif %}
   </header>
-  <div class="post-body">
+  <div class="entry-body">
     {{ content }}
   </div>
-  <nav class="post-nav">
-    {% if page.previous %}<a class="prev" href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>{% endif %}
-    {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>{% endif %}
+
+  <nav class="entry-nav">
+    {% if page.previous %}<a class="prev" href="{{ page.previous.url | relative_url }}">&larr; Prev</a>{% endif %}
+    <a class="index" href="{{ '/' | relative_url }}">Index</a>
+    {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}">Next &rarr;</a>{% endif %}
   </nav>
 </article>
