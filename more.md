@@ -48,7 +48,7 @@ Covers via [OpenLibrary](https://openlibrary.org). To update this list, edit `_d
 {% for book in site.data.finished %}
   <li class="book">
     <a class="book-link" href="{{ book.link }}" target="_blank" rel="noopener">
-      <img src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg"
+      <img src="{% if book.cover %}{{ book.cover }}{% else %}https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg{% endif %}"
            alt="{{ book.title }} cover"
            loading="lazy">
     </a>
