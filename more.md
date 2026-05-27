@@ -21,3 +21,23 @@ A rolling playlist — the songs in heavy rotation right now.
 </div>
 
 [Open in Spotify ↗](https://open.spotify.com/playlist/2xCNeagr6IfsSvLjMoXNFb)
+
+## What I'm reading
+
+<ul class="reading-list">
+{% for book in site.data.reading %}
+  <li class="book">
+    <a class="book-link" href="{{ book.link }}" target="_blank" rel="noopener">
+      <img src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg"
+           alt="{{ book.title }} cover"
+           loading="lazy">
+    </a>
+    <div class="book-meta">
+      <p class="book-title">{{ book.title }}</p>
+      <p class="book-author">{{ book.author }}</p>
+    </div>
+  </li>
+{% endfor %}
+</ul>
+
+Covers via [OpenLibrary](https://openlibrary.org). To update this list, edit `_data/reading.yml`.

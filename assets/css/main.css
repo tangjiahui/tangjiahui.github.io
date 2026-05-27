@@ -304,6 +304,52 @@ hr {
   border: 0;
 }
 
+/* ---------- Reading list (book covers) ---------- */
+.reading-list {
+  list-style: none;
+  margin: 1.5rem 0 1rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.75rem 1.25rem;
+}
+.book { margin: 0; }
+.book-link {
+  display: block;
+  border-bottom: none;
+  background: rgba(0,0,0,0.03);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.book-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  opacity: 1;
+}
+.book-link img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+.book-meta { margin-top: 0.65rem; }
+.book-title {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+}
+.book-author {
+  margin: 0.15rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--fg-muted);
+  font-weight: 400;
+}
+
 /* ---------- Custom cursor (olive square follower) ---------- */
 .cursor-square {
   position: fixed;
