@@ -41,3 +41,23 @@ A rolling playlist — the songs in heavy rotation right now.
 </ul>
 
 Covers via [OpenLibrary](https://openlibrary.org). To update this list, edit `_data/reading.yml`.
+
+## What I recently finished
+
+<ul class="reading-list">
+{% for book in site.data.finished %}
+  <li class="book">
+    <a class="book-link" href="{{ book.link }}" target="_blank" rel="noopener">
+      <img src="https://covers.openlibrary.org/b/isbn/{{ book.isbn }}-L.jpg"
+           alt="{{ book.title }} cover"
+           loading="lazy">
+    </a>
+    <div class="book-meta">
+      <p class="book-title">{{ book.title }}</p>
+      <p class="book-author">{{ book.author }}</p>
+    </div>
+  </li>
+{% endfor %}
+</ul>
+
+To update this list, edit `_data/finished.yml`.
