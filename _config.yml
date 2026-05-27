@@ -24,6 +24,7 @@ plugins:
 
 paginate: 10
 paginate_path: "/page:num/"
+future: true
 
 exclude:
   - Gemfile
