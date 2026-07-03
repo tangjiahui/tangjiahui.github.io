@@ -249,6 +249,13 @@ hr {
 
 .post-body, .page-body { font-size: 1rem; line-height: 1.65; }
 .post-body p, .page-body p { margin: 0 0 1.15rem; }
+.about-photo {
+  width: min(100%, 22rem);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 0 1.75rem;
+}
 .post-body h2, .page-body h2 {
   font-family: var(--sans);
   font-style: normal;
