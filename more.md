@@ -11,7 +11,7 @@ A rolling playlist — the songs in heavy rotation right now.
 
 <div class="spotify-embed">
   <iframe
-    src="https://open.spotify.com/embed/playlist/2xCNeagr6IfsSvLjMoXNFb?utm_source=generator&theme=0"
+    src="https://open.spotify.com/embed/playlist/2xCNeagr6IfsSvLjMoXNFb?utm_source=generator&theme=0&refresh=20260703"
     width="100%"
     height="480"
     frameborder="0"
