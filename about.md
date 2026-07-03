@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-subtitle: A short note on this site.
+subtitle: A short note about Jiahui Tang.
 permalink: /about/
 ---
 
