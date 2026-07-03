@@ -53,6 +53,9 @@ A rolling playlist — the songs in heavy rotation right now.
     <div class="book-meta">
       <p class="book-title">{{ book.title }}</p>
       <p class="book-author">{{ book.author }}</p>
+      {% if book.finished %}
+      <p class="book-finished">{{ book.finished }}</p>
+      {% endif %}
     </div>
   </li>
 {% endfor %}
